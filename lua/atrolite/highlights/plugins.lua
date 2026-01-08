@@ -1,0 +1,54 @@
+local M = {}
+
+local function hl(group, opts)
+    vim.api.nvim_set_hl(0, group, opts)
+end
+
+--TODO: Seperate into different group
+function M.setup(c)
+    -- Telescope
+    hl("TelescopeNormal", { fg = c.white, bg = c.black })
+    hl("TelescopeBorder", { fg = c.cream})
+
+    -- NvimTree
+    hl("NvimTreeNormal", {fg = c.white, bg = c.black})
+    hl("NvimTreeFolderName", {fg = c.blue})
+    hl("NvimTreeOpenedFolderName", {fg = c.dark_blue})
+
+    -- GitSigns
+    hl("GitSignsAdd", { fg = c.dark_green })
+    hl("GitSignsChange", { fg = c.green })
+    hl("GitSignsDelete", { fg = c.dark_red })
+
+    --LSP
+    hl("LspFloatWinNormal", {fg = c.white, bg = c.black})
+    hl("LspFloatWinBorder", {fg = c.black})
+    hl("LspInfoBorder", {fg = c.black})
+
+    hl("CmpDocumentation",{ fg = c.white, bg = c.black})
+    hl("CmpDocumentationBorder", { fg = c.cream, bg = c.black})
+    hl("CmpGhostText", { fg = c.black })
+    hl("CmpItemAbbr", { fg = c.white})
+    hl("CmpItemAbbrDeprecated",{ fg = c.cream, strikethrough = true })
+    hl("CmpItemAbbrMatch", { fg = c.cream })
+    hl("CmpItemAbbrMatchFuzzy", { fg = c.cream})
+    hl("CmpItemKindCodeium", { fg = c.blue})
+    hl("CmpItemKindCopilot", { fg = c.blue})
+    hl("CmpItemKindSupermaven", { fg = c.blue})
+    hl("CmpItemKindDefault", { fg = c.dark_grey})
+    hl("CmpItemKindTabNine", { fg = c.blue})
+    hl("CmpItemMenu", { fg = c.grey})
+
+    --indent
+    hl("IblIndent", {fg = c.dark_grey})
+    hl("IblScope", {fg = c.grey}) 
+
+    hl("LualineNormal", {fg=c.dark_red, bg = c.dark_grey})
+    hl("LualineInsert",{fg=c.dark_green})
+    hl("LualineVisual",{fg=c.dark_blue})
+    hl("LualineReplace",{fg=c.green})
+    hl("LualineInactive", {fg=c.dark_red, bg = c.dark_grey })
+end
+
+return M
+

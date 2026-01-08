@@ -12,7 +12,7 @@ function M.setup(c)
     hl("CursorLineNr", { fg = c.white })
 
     -- Syntax
-    hl("Keyword", { fg = c.red })
+    hl("Keyword", { fg = c.dark_red })
     hl("Function", { fg = c.blue })
     hl("Type", { fg = c.dark_blue })
     hl("String", { fg = c.dark_green })

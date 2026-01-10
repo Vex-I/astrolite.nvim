@@ -8,8 +8,8 @@ local M = {
     dark_red="#a7673e",
     blue="#6fb7ab",
     dark_blue="#539799",
-    green="#afc168",
-    dark_green="#87ad55",
+    green="#d1c784",
+    dark_green="#afc168",
 }
 
 return M

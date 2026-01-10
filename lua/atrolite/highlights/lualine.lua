@@ -23,7 +23,7 @@ return {
     },
 
     command = {
-        a = { fg = c.black, bg = c.yellow, gui = "bold" },
+        a = { fg = c.black, bg = c.green, gui = "bold" },
         b = { fg = c.white, bg = c.dark_grey },
     },
 

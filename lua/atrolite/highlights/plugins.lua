@@ -25,10 +25,13 @@ function M.setup(c)
     hl("LspFloatWinBorder", {fg = c.black})
     hl("LspInfoBorder", {fg = c.black})
 
-    hl("CmpDocumentation",{ fg = c.white, bg = c.black})
-    hl("CmpDocumentationBorder", { fg = c.cream, bg = c.black})
-    hl("CmpGhostText", { fg = c.black })
-    hl("CmpItemAbbr", { fg = c.white})
+    --nvim-cmp
+    hl("CmpPmenu", { fg = c.white, bg = "NONE"})
+    hl("CmpPmenuSel", { fg = c.cream, bg = c.grey })
+    hl("CmpDocumentation", { fg = c.white, bg = c.black})
+    hl("CmpDocumentationBorder", { fg = c.cream, bg = "NONE"})
+    hl("CmpGhostText", { fg = c.black } )
+    hl("CmpItemAbbr", { fg = c.white} )
     hl("CmpItemAbbrDeprecated",{ fg = c.cream, strikethrough = true })
     hl("CmpItemAbbrMatch", { fg = c.cream })
     hl("CmpItemAbbrMatchFuzzy", { fg = c.cream})
@@ -39,15 +42,11 @@ function M.setup(c)
     hl("CmpItemKindTabNine", { fg = c.blue})
     hl("CmpItemMenu", { fg = c.grey})
 
+    --bufferline
+
     --indent
     hl("IblIndent", {fg = c.dark_grey})
     hl("IblScope", {fg = c.grey}) 
-
-    hl("LualineNormal", {fg=c.dark_red, bg = c.dark_grey})
-    hl("LualineInsert",{fg=c.dark_green})
-    hl("LualineVisual",{fg=c.dark_blue})
-    hl("LualineReplace",{fg=c.green})
-    hl("LualineInactive", {fg=c.dark_red, bg = c.dark_grey })
 end
 
 return M
